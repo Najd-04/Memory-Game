@@ -1,0 +1,101 @@
+
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête */
+header {
+    background-color: #4CAF50;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Menu de navigation */
+nav {
+    background-color: #333;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: center;
+}
+
+nav .menu a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+nav .menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Section de jeu de mémoire */
+.memory-game {
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem auto;
+    perspective: 1000px;
+}
+
+/* Cartes de mémoire */
+.memory-card {
+    width: calc(25% - 10px);
+    height: 160px;
+    margin-bottom: 10px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.memory-card .front-face {
+    transform: rotateY(180deg);
+}
+
+/* Score */
+#score {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/* Message de fin de partie */
+#message {
+    font-size: 1.2rem;
+    color: red;
+    margin: 1rem;
+}

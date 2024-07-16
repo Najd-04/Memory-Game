@@ -28,7 +28,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 /* Menu de navigation */
@@ -57,46 +57,60 @@ nav .menu a:hover {
     color: black;
 }
 
-/* Contenu principal */
-.container {
+/* Formulaire */
+.form {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 90%;
-    max-width: 800px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container p {
+.form h2 {
     margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.container h2 {
-    margin-bottom: 10px;
+    font-size: 1.5rem;
     color: #4CAF50;
 }
 
-.container ul {
-    margin-bottom: 20px;
-    list-style: inside disc;
+.form label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.container ul li {
+.form .input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form .btn:hover {
+    background-color: #45a049;
+}
+
+.message.erreur {
+    color: red;
     margin-bottom: 10px;
-}
-
-.container img {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Paragraphe avec texte fort */
-.container strong {
-    color: #333;
+    font-size: 0.9rem;
 }
 
 /* Média queries pour adaptabilité */
@@ -107,5 +121,9 @@ nav .menu a:hover {
 
     nav .menu a {
         padding: 10px;
+    }
+
+    .form {
+        width: 100%;
     }
 }

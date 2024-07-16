@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory-Game</title>
+    <link rel="stylesheet" href="css/profil.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Profil</h1>
+        <img src="images/question.svg" alt="question">
+    </header>
+    <section>
+        <nav>
+            <div class="menu">
+                <a href="index.html">Accueil</a>
+                <a href="inscription.html">S'inscrire</a>
+                <a href="connexion.html">Se connecter</a>
+                <a href="profil.html">Profil</a>
+                <a href="jouer.html">Jouer</a>
+            </div>
+        </nav>
+        <form id="contactForm" class="form">
+            <label for="name">Nom d'utilisateur :</label>
+            <input type="text" id="name" name="name" class="input" />
+            <div class="message erreur" id="erreur-name"></div>
+            <label for="mail">Entrez votre email :</label>
+            <input type="email" id="mail" name="mail" class="input" />
+            <div class="message erreur" id="erreur-mail"></div>
+            <h2>Choix du Memory :</h2>
+            <label for="memory"></label>
+
+        <select name="memory" id="memory" multiple>
+            <option value="legume">fruits et legumes</option>
+            <option value="animaux">Animaux</option>
+            <option value="voitures">Voitures</option>
+        </select>
+    </section>
+</body>
+</html>

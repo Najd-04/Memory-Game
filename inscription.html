@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory-Game</title>
+    <link rel="stylesheet" href="css/inscription.css">
+
+</head>
+<body>
+    <header>
+        <h1>Najd Memory Game - inscription</h1>
+    </header>
+    <section>
+        <nav>
+            <div class="menu">
+                <a href="index.html">Accueil</a>
+                <a href="inscription.html">S'inscrire</a>
+                <a href="connexion.html">Se connecter</a>
+                <a href="profil.html">Profil</a>
+                <a href="jouer.html">Jouer</a>
+            </div>
+        </nav>
+        <form id="contactForm" class="form">
+            <label for="name">Nom d'utilisateur :</label>
+            <input type="text" id="name" name="name" class="input" />
+            <div class="message erreur" id="erreur-name"></div>
+
+            <label for="mail">Entrez votre email :</label>
+            <input type="email" id="mail" name="mail" class="input" />
+            <div class="message erreur" id="erreur-mail"></div>
+        
+            <label for="motdepasse">Mot de passe :</label>
+            <input type="password" id="motdepasse" name="motdepasse" class="input" />
+            <div class="message erreur" id="erreur-motdepasse"></div>
+        
+        
+            <label for="motdepasse">Confirmez le mot de passe :</label>
+            <input type="password" id="password" name="password" class="input" />
+            <div class="message erreur" id="erreur-password"></div>
+        
+            <button type="submit" class="btn">Creation du compte</button>
+            <button type="reset" class="btn">Annuler</button>
+        </form>
+    </section>
+    <script src = "js/app.js"></script>
+</body>
+</html>
