@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const inscriptionForm = document.getElementById('contactForm');
     const connexionForm = document.getElementById('connexionForm');
 
+    // Fonction pour secouer la fenêtre en cas d'erreur
+    function shakeWindow() {
+        document.body.classList.add('shake');
+        setTimeout(() => {
+            document.body.classList.remove('shake');
+        }, 500);
+    }
+
     // Vérifier si le formulaire d'inscription existe sur la page
     if (inscriptionForm) {
         const nameInput = document.getElementById('name');
@@ -143,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 inscriptionForm.reset();
             } else {
                 console.log("Échec de la validation du formulaire d'inscription");
+                shakeWindow(); // Appel de la fonction de secousse en cas d'erreur
             }
         });
 
@@ -193,8 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = "profil.html";
             } else {
                 console.log("Échec de la validation du formulaire de connexion");
+                shakeWindow(); // Appel de la fonction de secousse en cas d'erreur
             }
         });
     }
 });
+
 

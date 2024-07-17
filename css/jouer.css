@@ -50,7 +50,8 @@ nav .menu a:hover {
 
 /* Section de jeu de mémoire */
 .memory-game {
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -98,4 +99,33 @@ nav .menu a:hover {
     font-size: 1.2rem;
     color: red;
     margin: 1rem;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .memory-card {
+        width: calc(33.33% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .memory-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 320px) {
+    .memory-card {
+        width: 100%;
+    }
+
+    #score,
+    #message {
+        text-align: center;
+    }
 }
