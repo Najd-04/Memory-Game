@@ -77,13 +77,13 @@ function resetBoard() {
   [firstCard, secondCard] = [null, null];
 }
 
-// mélange des carte (position aléatoire des cartes)
-(function shuffle() {
+// Fonction pour mélanger les cartes
+function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * cards.length); 
     card.style.order = randomPos; 
   });
-})();
+}
 
 // Ajoute l'événement clic à chaque carte
 cards.forEach(card => card.addEventListener('click', flipCard));
@@ -114,3 +114,6 @@ function resetGame() {
   });
   shuffle();
 }
+
+// Appel initial à la fonction shuffle pour mélanger les cartes au démarrage du jeu
+shuffle();
