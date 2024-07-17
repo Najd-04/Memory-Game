@@ -24,21 +24,43 @@
                 <a href="jouer.html">Jouer</a>
             </div>
         </nav>
-        <form id="contactForm" class="form">
-            <label for="name">Nom d'utilisateur :</label>
-            <input type="text" id="name" name="name" class="input" />
-            <div class="message erreur" id="erreur-name"></div>
-            <label for="mail">Entrez votre email :</label>
-            <input type="email" id="mail" name="mail" class="input" />
-            <div class="message erreur" id="erreur-mail"></div>
+       <div id="userProfile">
+            <h2>Informations Utilisateur</h2>
+            <div>
+                <label for="username">Nom d'utilisateur :</label>
+                <span id="username"></span>
+            </div>
+            <div>
+                <label for="email">Email :</label>
+                <span id="email"></span>
+            </div>
+        </div>
+    </section>
             <h2>Choix du Memory :</h2>
             <label for="memory"></label>
-
         <select name="memory" id="memory" multiple>
             <option value="legume">fruits et legumes</option>
             <option value="animaux">Animaux</option>
             <option value="voitures">Voitures</option>
         </select>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Récupérer l'utilisateur courant depuis localStorage
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+            if (currentUser) {
+                // Afficher les informations de l'utilisateur sur la page
+                const usernameElement = document.getElementById('username');
+                const emailElement = document.getElementById('email');
+
+                usernameElement.textContent = currentUser.name;
+                emailElement.textContent = currentUser.email;
+            } else {
+                // Rediriger vers la page de connexion si aucune utilisateur n'est connecté
+                window.location.href = "connexion.html";
+            }
+        });
+    </script>
 </body>
 </html>

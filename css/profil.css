@@ -1,13 +1,15 @@
-/* Réinitialisation des styles par défaut */
+/* profil.css */
+
+/* Reset des marges et des paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corps de la page */
+/* Style général du body */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
     display: flex;
@@ -16,106 +18,120 @@ body {
     padding: 20px;
 }
 
-/* En-tête */
+/* Style de l'en-tête */
 header {
     background-color: #4CAF50;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
     color: white;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2rem;
+    
     margin-bottom: 10px;
 }
 
 header img {
-    max-width: 100px;
-    height: auto;
+    width: 50px;
+    height: 50px;
 }
 
-/* Menu de navigation */
-nav {
-    background-color: #333;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
+/* Style de la navigation */
 nav .menu {
     display: flex;
     justify-content: center;
+    background-color: #333;
+    margin-top: 20px;
+    width: 100%;
 }
 
 nav .menu a {
     color: white;
-    text-align: center;
+
     padding: 14px 20px;
     text-decoration: none;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    flex: 1;
 }
 
 nav .menu a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #575757;
 }
 
-/* Formulaire */
-.form {
+/* Style du profil utilisateur */
+#userProfile {
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     padding: 20px;
-    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
     max-width: 500px;
-    display: flex;
-    flex-direction: column;
+
 }
 
-.form label {
-    margin-bottom: 5px;
-    font-weight: bold;
+#userProfile h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4CAF50;
 }
 
-.form .input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form select {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.message.erreur {
-    color: red;
+#userProfile div {
     margin-bottom: 10px;
-    font-size: 0.9rem;
 }
 
-/* Média queries pour adaptabilité */
+#userProfile label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#userProfile span {
+    font-style: italic;
+}
+
+/* Style du sélecteur de mémoire */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+select#memory {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    font-size: 16px;
+        }
+        
+ /* Style pour les options du sélecteur de mémoire */
+ select#memory option {
+padding: 10px;
+ }
+        
+/* Ajustements pour petits écrans */
 @media (max-width: 600px) {
-    nav .menu {
-        flex-direction: column;
-    }
-
-    nav .menu a {
-        padding: 10px;
-    }
-
-    .form {
-        width: 100%;
-    }
+nav .menu {
+flex-direction: column;
+ }
+        
+nav .menu a {
+padding: 10px;
 }
+        
+#userProfile {
+width: 90%;
+}
+        
+select#memory {
+width: 90%;
+} }
