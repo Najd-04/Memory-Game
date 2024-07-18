@@ -1,88 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory-Game</title>
-    <link rel="stylesheet" href="css/jouer.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="css/jouer.css" />
+  </head>
+  <body>
     <header>
-        <h1>Najd Memory Game</h1>
+      <h1>Najd Memory Game</h1>
     </header>
     <section>
-        <nav>
-            <div class="menu">
-                <a href="index.html">Accueil</a>
-                <a href="inscription.html">S'inscrire</a>
-                <a href="connexion.html">Se connecter</a>
-                <a href="profil.html">Profil</a>
-                <a href="jouer.html">Jouer</a>
-            </div>
-        </nav>
+      <nav>
+        <div class="menu">
+          <a href="index.html">Accueil</a>
+          <a href="inscription.html">S'inscrire</a>
+          <a href="connexion.html">Se connecter</a>
+          <a href="profil.html">Profil</a>
+          <a href="jouer.html">Jouer</a>
+        </div>
+      </nav>
     </section>
     <div id="moves-counter">coups: 0</div>
     <div id="score-counter">Score: 0</div>
-     <section class="memory-game">
-      
-    <div class="memory-card" data-framework="legume4">
-      <img class="front-face" src="images/memory-legume/4.svg" alt="legume4" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
-    <div class="memory-card" data-framework="legume5">
-      <img class="front-face" src="images/memory-legume/5.svg" alt="legume5" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
+    <div id="timer">Temps: 0s</div>
+    <div id="message" style="display: none"></div>
+    <section class="memory-game">
+      <div class="memory-card" data-framework="legume4">
+        <img
+          class="front-face"
+          src="images/memory-legume/4.svg"
+          alt="legume4"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
+      <div class="memory-card" data-framework="legume5">
+        <img
+          class="front-face"
+          src="images/memory-legume/5.svg"
+          alt="legume5"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
 
-    <div class="memory-card" data-framework="legume1">
-      <img class="front-face" src="images/memory-legume/1.svg" alt="legume1" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
-    <div class="memory-card" data-framework="legume2">
-      <img class="front-face" src="images/memory-legume/2.svg" alt="legume2" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
+      <div class="memory-card" data-framework="legume1">
+        <img
+          class="front-face"
+          src="images/memory-legume/1.svg"
+          alt="legume1"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
+      <div class="memory-card" data-framework="legume2">
+        <img
+          class="front-face"
+          src="images/memory-legume/2.svg"
+          alt="legume2"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
 
-    <div class="memory-card" data-framework="legume3">
-    <img class="front-face" src="images/memory-legume/3.svg" alt="legume3" />
-    <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
-    <div class="memory-card" data-framework="legume6">
-      <img class="front-face" src="images/memory-legume/6.svg" alt="legume6" />
-      <img class="back-face" src="images/question.svg" alt="question " />
-    </div>
+      <div class="memory-card" data-framework="legume3">
+        <img
+          class="front-face"
+          src="images/memory-legume/3.svg"
+          alt="legume3"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
+      <div class="memory-card" data-framework="legume6">
+        <img
+          class="front-face"
+          src="images/memory-legume/6.svg"
+          alt="legume6"
+        />
+        <img class="back-face" src="images/question.svg" alt="question " />
+      </div>
 
-    <div class="memory-card" data-framework="legume3">
-      <img class="front-face" src="images/memory-legume/3.svg" alt="legume3" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
-    <div class="memory-card" data-framework="legume5">
-      <img class="front-face" src="images/memory-legume/5.svg" alt="legume5" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
+      <div class="memory-card" data-framework="legume3">
+        <img
+          class="front-face"
+          src="images/memory-legume/3.svg"
+          alt="legume3"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
+      <div class="memory-card" data-framework="legume5">
+        <img
+          class="front-face"
+          src="images/memory-legume/5.svg"
+          alt="legume5"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
 
-    <div class="memory-card" data-framework="legume6">
-      <img class="front-face" src="images/memory-legume/6.svg" alt="legume6" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
-    <div class="memory-card" data-framework="legume4">
-      <img class="front-face" src="images/memory-legume/4.svg" alt="legume4" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
+      <div class="memory-card" data-framework="legume6">
+        <img
+          class="front-face"
+          src="images/memory-legume/6.svg"
+          alt="legume6"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
+      <div class="memory-card" data-framework="legume4">
+        <img
+          class="front-face"
+          src="images/memory-legume/4.svg"
+          alt="legume4"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
 
-    <div class="memory-card" data-framework="legume1">
-      <img class="front-face" src="images/memory-legume/1.svg" alt="legume1" />
-      <img class="back-face" src="images/question.svg" alt="question" />
+      <div class="memory-card" data-framework="legume1">
+        <img
+          class="front-face"
+          src="images/memory-legume/1.svg"
+          alt="legume1"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
+      <div class="memory-card" data-framework="legume2">
+        <img
+          class="front-face"
+          src="images/memory-legume/2.svg"
+          alt="legume2"
+        />
+        <img class="back-face" src="images/question.svg" alt="question" />
+      </div>
+    </section>
+    <div id="message" style="display: none">
+      Appuyez sur espace pour une nouvelle partie
     </div>
-    <div class="memory-card" data-framework="legume2">
-      <img class="front-face" src="images/memory-legume/2.svg" alt="legume2" />
-      <img class="back-face" src="images/question.svg" alt="question" />
-    </div>
-    
-  </section>
-  <div id="message" style="display: none;">Appuyez sur espace pour une nouvelle partie</div>
-  <script src= "js/jouer.js" ></script>
-</body>
+    <script src="js/jouer.js"></script>
+  </body>
 </html>

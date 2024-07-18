@@ -22,6 +22,7 @@
                 <a href="connexion.html">Se connecter</a>
                 <a href="profil.html">Profil</a>
                 <a href="jouer.html">Jouer</a>
+                <a id="deconnexion">Déconnexion</a>
             </div>
         </nav>
        <div id="userProfile">
@@ -45,7 +46,7 @@
         </select>
     </section>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
             // Récupérer l'utilisateur courant depuis localStorage
             const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
@@ -61,6 +62,21 @@
                 window.location.href = "connexion.html";
             }
         });
+        // Vérifier si un utilisateur est connecté et afficher le bouton de déconnexion
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (currentUser) {
+    document.getElementById('deconnexion').style.display = 'inline-block';
+    }
+
+    // Écouteur d'événement pour la déconnexion
+    document.getElementById('deconnexion').addEventListener('click', () => {
+    // Supprimer l'utilisateur courant du localStorage
+    localStorage.removeItem('currentUser');
+    // Cacher le bouton de déconnexion
+    document.getElementById('deconnexion').style.display = 'none';
+    // Rediriger vers la page de connexion ou d'accueil
+    window.location.href = "connexion.html"; //  si vous préférez rediriger vers l'accueil
+    });
     </script>
 </body>
 </html>

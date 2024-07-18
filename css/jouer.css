@@ -44,7 +44,7 @@ nav .menu a {
 }
 
 nav .menu a:hover {
-    background-color: #ddd;
+    background-color: #198015;
     color: black;
 }
 
@@ -97,7 +97,7 @@ nav .menu a:hover {
 /* Message de fin de partie */
 #message {
     font-size: 1.2rem;
-    color: red;
+    color: rgb(78, 173, 49);
     margin: 1rem;
 }
 

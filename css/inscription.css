@@ -53,7 +53,7 @@ nav .menu a {
 }
 
 nav .menu a:hover {
-    background-color: #ddd;
+    background-color: #198015;
     color: black;
 }
 
@@ -102,6 +102,7 @@ nav .menu a:hover {
     margin-bottom: 10px;
     font-size: 0.9rem;
 }
+
 
 /* Média queries pour adaptabilité */
 @media (max-width: 600px) {

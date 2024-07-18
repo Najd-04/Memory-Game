@@ -29,7 +29,6 @@ header {
 }
 
 header h1 {
-    
     margin-bottom: 10px;
 }
 
@@ -49,7 +48,6 @@ nav .menu {
 
 nav .menu a {
     color: white;
-
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
@@ -57,20 +55,18 @@ nav .menu a {
 }
 
 nav .menu a:hover {
-    background-color: #575757;
+    background-color: #198015;
 }
 
 /* Style du profil utilisateur */
 #userProfile {
     background-color: white;
-
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     width: 100%;
     max-width: 500px;
-
 }
 
 #userProfile h2 {
@@ -100,37 +96,35 @@ h2 {
     color: #4CAF50;
 }
 
-select#memory {
+/* Ajustement pour le sélecteur de mémoire */
+#memory {
     width: 100%;
     max-width: 500px;
     padding: 10px;
     margin-top: 10px;
+    margin-bottom: 20px;
+    /* Ajout d'une marge en bas pour l'espacement */
     border: 1px solid #ccc;
-    border-radius: 5px
-    box-shadow : 0 2px 4px rgba(0, 0, 0, 0.1);
-    appearance : none;
-    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Assure que le padding est inclus dans la largeur */
 }
-        
- /* Style pour les options du sélecteur de mémoire */
- select#memory option {
-padding: 10px;
- }
-        
+
 /* Ajustements pour petits écrans */
 @media (max-width: 600px) {
-nav .menu {
-flex-direction: column;
- }
-        
-nav .menu a {
-padding: 10px;
+    nav .menu {
+        flex-direction: column;
+    }
+
+    nav .menu a {
+        padding: 10px;
+    }
+
+    #userProfile {
+        width: 90%;
+    }
+
+    #memory {
+        width: 90%;
+    }
 }
-        
-#userProfile {
-width: 90%;
-}
-        
-select#memory {
-width: 90%;
-} }
