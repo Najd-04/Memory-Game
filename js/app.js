@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Email valide");
         return true;
     }
-
+    
     // Fonction de validation du mot de passe
     function validatePassword() {
         console.log("Validation du mot de passe en cours...");

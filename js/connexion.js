@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('shake');
         }, 500);
     }
-
+    
     // Vérifier si le formulaire d'inscription existe sur la page
     if (inscriptionForm) {
         const nameInput = document.getElementById('name');
